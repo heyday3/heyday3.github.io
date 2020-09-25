@@ -13,6 +13,10 @@ app.use(express.static('public'));
 app.route('/api')
   .get((req, res) => {
     console.log('GET request detected');
+
+    router.get('/', function (req, res) {
+      res.send('hello world')
+    })
   })
   .post((req, res) => {
     console.log('POST request detected');
@@ -22,3 +26,5 @@ app.route('/api')
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}!`);
 });
+
+
