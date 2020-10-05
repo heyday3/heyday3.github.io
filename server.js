@@ -2,6 +2,9 @@
 /* eslint-disable no-console */
 /* eslint-disable no-unused-vars */
 import express from 'express';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -13,10 +16,14 @@ app.use(express.static('public'));
 app.route('/api')
   .get((req, res) => {
     console.log('GET request detected');
+<<<<<<< HEAD
 
     router.get('/', function (req, res) {
       res.send('hello world')
     })
+=======
+    res.send(`Lab 5 for ${process.env.NAME}`);
+>>>>>>> 909375a2b0b535df0f171bc967ba90cb521f7ffb
   })
   .post((req, res) => {
     console.log('POST request detected');
