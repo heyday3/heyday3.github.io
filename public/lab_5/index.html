@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Andrew Day's Lab 5</title>
+  <title>Andrew Day's Lab 4</title>
   <link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
 <body>
   <div class="wrapper">
     <div class="container">
         <div class="header">
-            <h1>Andrew Day's Lab 5</h1>
+            <h1>Andrew Day's Lab 4</h1>
         </div>
         <form action="/api" method="post">
             <ul class="flex-outer">
@@ -45,12 +45,15 @@
         </form>
     </div>
 </div>
+
 function testFunction(){
   fetch('/api')
   .then((response) => response.text())
   .then((response) => {
        console.log(response);
   })
+  var el = document.querySelector('Andrew Day's Lab 4')
+  el.innerHTML; = "Andrew Day's Lab 5";
 }
 </body>
 </html>
